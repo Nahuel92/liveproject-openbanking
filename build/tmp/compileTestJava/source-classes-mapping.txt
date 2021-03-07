@@ -1,0 +1,6 @@
+org/nahuelrodriguez/openbankingapp/service/impl/TransactionServiceTest.java
+ org.nahuelrodriguez.openbankingapp.service.impl.TransactionServiceTest
+org/nahuelrodriguez/openbankingapp/OpenbankingappApplicationTests.java
+ org.nahuelrodriguez.openbankingapp.OpenbankingappApplicationTests
+org/nahuelrodriguez/openbankingapp/controller/TransactionControllerIntegrationTest.java
+ org.nahuelrodriguez.openbankingapp.controller.TransactionControllerIntegrationTest
