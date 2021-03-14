@@ -1,6 +1,6 @@
 package org.nahuelrodriguez.openbankingapp.controller;
 
-import org.nahuelrodriguez.openbankingapp.model.Transaction;
+import org.nahuelrodriguez.openbankingapp.entities.Transaction;
 import org.nahuelrodriguez.openbankingapp.service.TransactionService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

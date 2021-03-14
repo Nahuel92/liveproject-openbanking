@@ -1,4 +1,4 @@
-package org.nahuelrodriguez.openbankingapp.model;
+package org.nahuelrodriguez.openbankingapp.entities;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 public class Transaction {
     private String type;
     private LocalDateTime date;
-    private Long accountNumber;
+    private String accountNumber;
     private String currency;
     private String amount;
     private String merchantName;
