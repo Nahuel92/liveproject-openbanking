@@ -1,6 +1,7 @@
 plugins {
     id 'org.springframework.boot' version '2.4.3'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id "org.openapi.generator" version "5.0.1"
     id 'java'
 }
 
@@ -19,19 +20,33 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'io.github.resilience4j:resilience4j-spring-boot2:1.7.0'
+    implementation 'io.springfox:springfox-swagger2:3.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.4.3'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.4.3'
+    testImplementation 'io.rest-assured:rest-assured:4.3.3'
+    testImplementation 'io.rest-assured:spring-mock-mvc:4.3.3'
+    testImplementation 'io.rest-assured:json-path:4.3.3'
+    testImplementation 'io.rest-assured:xml-path:4.3.3'
+    testImplementation 'io.rest-assured:rest-assured-common:4.3.3'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.rest-assured:rest-assured:4.2.0'
-    testImplementation 'io.rest-assured:spring-mock-mvc:4.2.0'
-    testImplementation 'io.rest-assured:json-path:4.2.0'
-    testImplementation 'io.rest-assured:xml-path:4.2.0'
-    testImplementation 'io.rest-assured:rest-assured-common:4.2.0'
-
-
 }
 
 test {
     useJUnitPlatform()
+}
+
+openApiGenerate {
+    generatorName.set("openbanking-api")
+
+    inputSpec.set("$rootDir/docs/openapi/account-info.yaml")
+    outputDir.set("$buildDir/generated/openbanking/api")
+
+    apiPackage.set("org.openbanking.api")
+    invokerPackage.set("org.openbanking.invoker")
+    modelPackage.set("org.openbanking.model")
 }
