@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.security.Principal;
 import java.util.Collection;
 
 @RestController
@@ -23,8 +22,7 @@ public class TransactionController {
 
     @PostFilter(value = "hasAuthority(filterObject.accountNumber)")
     @GetMapping(path = "/{accountNumber}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Collection<Transaction> getTransactions(@PathVariable final String accountNumber,
-                                                   final Principal principal) {
+    public Collection<Transaction> getTransactions(@PathVariable final String accountNumber) {
         return transactionServiceImpl.findAllByAccountNumber(accountNumber);
     }
 }
