@@ -25,15 +25,19 @@ dependencies {
     implementation 'javax.validation:validation-api:2.0.1.Final'
     implementation 'io.github.resilience4j:resilience4j-spring-boot2:1.7.0'
     implementation 'io.springfox:springfox-swagger2:3.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-validation:2.4.3'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-webflux:2.4.3'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.2'
+    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2:2.2.4.RELEASE'
     testImplementation 'io.rest-assured:rest-assured:4.3.3'
     testImplementation 'io.rest-assured:spring-mock-mvc:4.3.3'
     testImplementation 'io.rest-assured:json-path:4.3.3'
     testImplementation 'io.rest-assured:xml-path:4.3.3'
     testImplementation 'io.rest-assured:rest-assured-common:4.3.3'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test:5.4.5'
 }
 
 test {
@@ -41,7 +45,7 @@ test {
 }
 
 openApiGenerate {
-    generatorName.set("openbanking-api")
+    generatorName.set("spring")
 
     inputSpec.set("$rootDir/docs/openapi/account-info.yaml")
     outputDir.set("$buildDir/generated/openbanking/api")

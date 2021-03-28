@@ -1,4 +1,4 @@
-package org.nahuelrodriguez.openbankingapp.repositories;
+package org.nahuelrodriguez.openbankingapp.repository;
 
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +14,6 @@ public class MerchantDetailsRepositoryImpl implements MerchantDetailsRepository 
     );
 
     public String getMerchantLogo(final String merchantKey) {
-        return merchantsLogos.get(merchantKey.toLowerCase());
+        return merchantsLogos.get(merchantKey);
     }
 }

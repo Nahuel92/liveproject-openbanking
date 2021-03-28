@@ -1,6 +1,6 @@
 package org.nahuelrodriguez.openbankingapp.service;
 
-import org.nahuelrodriguez.openbankingapp.entities.Transaction;
+import org.nahuelrodriguez.openbankingapp.entity.Transaction;
 
 import java.util.Collection;
 

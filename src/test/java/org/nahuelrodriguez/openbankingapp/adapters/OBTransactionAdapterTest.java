@@ -4,6 +4,7 @@ import com.external.api.model.*;
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.nahuelrodriguez.openbankingapp.adapter.OBTransactionAdapter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

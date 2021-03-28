@@ -1,7 +1,7 @@
-package org.nahuelrodriguez.openbankingapp.adapters;
+package org.nahuelrodriguez.openbankingapp.adapter;
 
 import com.external.api.model.*;
-import org.nahuelrodriguez.openbankingapp.entities.Transaction;
+import org.nahuelrodriguez.openbankingapp.entity.Transaction;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

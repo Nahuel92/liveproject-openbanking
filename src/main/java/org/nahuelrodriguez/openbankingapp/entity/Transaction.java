@@ -1,4 +1,4 @@
-package org.nahuelrodriguez.openbankingapp.entities;
+package org.nahuelrodriguez.openbankingapp.entity;
 
 import lombok.Data;
 
