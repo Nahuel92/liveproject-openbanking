@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  better-banking:
+    image: better-banking:v1.0.0
+    restart: on-failure
+    network_mode: host
+    environment:
+      EXTERNAL_BANKING_API_URL: http://localhost:8080
+
+  redis:
+    image: redis:6.2.1-alpine
+    restart: on-failure
+    network_mode: host
